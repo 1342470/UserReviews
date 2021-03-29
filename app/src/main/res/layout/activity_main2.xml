@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserActivity">
+
+    <EditText
+        android:id="@+id/RatingInput"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="200dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <EditText
+        android:id="@+id/ratingInput"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="316dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <EditText
+        android:id="@+id/Location"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="44dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        android:labelFor="@+id/Location"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <EditText
+        android:id="@+id/Reivew"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="124dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <TextView
+        android:id="@+id/LocaitonLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="40dp"
+        android:labelFor="@+id/Location"
+        android:text="@string/location"
+        app:layout_constraintBottom_toBottomOf="@+id/Location"
+        app:layout_constraintStart_toStartOf="@+id/Location" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="120dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        android:labelFor="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/UsernameLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="40dp"
+        android:labelFor="@+id/username"
+        android:text="@string/username"
+        app:layout_constraintBottom_toBottomOf="@+id/username"
+        app:layout_constraintStart_toStartOf="@+id/username" />
+
+    <TextView
+        android:id="@+id/AddreviewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_review"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/Discription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/Reivew"
+        android:text="@string/discription"
+        app:layout_constraintBottom_toTopOf="@+id/Reivew"
+        app:layout_constraintStart_toStartOf="@+id/Reivew" />
+
+    <TextView
+        android:id="@+id/Rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/RatingInput"
+        android:text="@string/rating"
+        app:layout_constraintBottom_toTopOf="@+id/RatingInput"
+        app:layout_constraintStart_toStartOf="@+id/RatingInput" />
+
+    <CheckBox
+        android:id="@+id/VeganCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vegan"
+        app:layout_constraintStart_toStartOf="@+id/RatingInput"
+        app:layout_constraintTop_toBottomOf="@+id/RatingInput" />
+
+    <TextView
+        android:id="@+id/Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        app:layout_constraintBottom_toTopOf="@+id/ratingInput"
+        app:layout_constraintStart_toStartOf="@+id/ratingInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

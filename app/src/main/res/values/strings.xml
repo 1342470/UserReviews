@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">UserDatabase</string>
+    <string name="title_activity_createnewuser">Createnewuser</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="foodidinput">foodidinput</string>
+    <string name="submit">submit</string>
+    <string name="foodid">foodid</string>
+    <string name="view_reviews">View reviews</string>
+    <string name="username">username</string>
+    <string name="back">back</string>
+    <string name="add_review">Add review</string>
+    <string name="please_slection_from_the_following_options_to_get_started">Please slection from the following options to get started</string>
+    <string name="welcome_user">Welcome user</string>
+    <string name="refood">Refood</string>
+    <string name="location">Location</string>
+    <string name="please_select_from_the_following_options_to_get_started">please select from the following options to get started</string>
+    <string name="review">Review</string>
+    <string name="reviews">Reviews</string>
+    <string name="go_home">Go home</string>
+    <string name="rating">Rating</string>
+    <string name="vegen">Vegen</string>
+    <string name="discription">Discription</string>
+    <string name="vegan">Vegan</string>
+</resources>
