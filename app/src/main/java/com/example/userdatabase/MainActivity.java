@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.userdatabase.AddUserActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         skipnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AddUserActivity.class));
+                startActivity(new Intent(MainActivity.this, AddRewviewActivity.class));
             }
         });
     }

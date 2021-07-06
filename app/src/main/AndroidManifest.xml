@@ -11,7 +11,7 @@
         android:theme="@style/Theme.UserDatabase">
         <activity android:name=".Reviews"></activity>
         <activity android:name=".ListUserActivity" />
-        <activity android:name=".AddUserActivity" />
+        <activity android:name=".AddRewviewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

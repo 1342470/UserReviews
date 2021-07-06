@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddUserActivity">
+    tools:context=".AddRewviewActivity">
 
     <EditText
         android:id="@+id/RatingInput"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <EditText
-        android:id="@+id/ratingInput"
+        android:id="@+id/PriceInput"
         android:layout_width="294dp"
         android:layout_height="42dp"
         android:layout_marginTop="316dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <EditText
-        android:id="@+id/Reivew"
+        android:id="@+id/discriptionInput"
         android:layout_width="294dp"
         android:layout_height="42dp"
         android:layout_marginTop="124dp"
@@ -111,10 +111,10 @@
         android:id="@+id/Discription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:labelFor="@id/Reivew"
+        android:labelFor="@id/discriptionInput"
         android:text="@string/discription"
-        app:layout_constraintBottom_toTopOf="@+id/Reivew"
-        app:layout_constraintStart_toStartOf="@+id/Reivew" />
+        app:layout_constraintBottom_toTopOf="@+id/discriptionInput"
+        app:layout_constraintStart_toStartOf="@+id/discriptionInput" />
 
     <TextView
         android:id="@+id/Rating"
@@ -137,8 +137,8 @@
         android:id="@+id/Price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price"
-        app:layout_constraintBottom_toTopOf="@+id/ratingInput"
-        app:layout_constraintStart_toStartOf="@+id/ratingInput" />
+        android:text="@string/price"
+        app:layout_constraintBottom_toTopOf="@+id/PriceInput"
+        app:layout_constraintStart_toStartOf="@+id/PriceInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

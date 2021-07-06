@@ -9,14 +9,35 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(@Nullable Context context) {
-        super(context, "MyFirstDB", null, 1);
+        super(context, "MyFirstDB", null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createUserTable = "CREATE TABLE IF NOT EXISTS reivew(food_info_id integer PRIMARY KEY,Discription text, rating integer, FOREIGN KEY (id) REFERENCES foodInfo (id) )";
-        String createShopTable = "CREATE TABLE IF NOT EXISTS shopInfo(id int, location text, ShopName text)";
-        String createFoodInfoTable = "CREATE TABLE IF NOT EXISTS foodInfo(id int, Shop_id int, Food_Name text, discriotion text, Vegan boolean, Image blob, Price real)";
+        String createUserTable = "" +
+                "CREATE TABLE IF NOT EXISTS review(" +
+                "id integer PRIMARY KEY AUTOINCREMENT," +
+                "description text, " +
+                "rating integer, " +
+                "FOREIGN KEY (id) REFERENCES foodInfo (id) " +
+                ")";
+        String createShopTable = "" +
+                "CREATE TABLE IF NOT EXISTS shopInfo(" +
+                "id INT PRIMARY KEY AUTOINCREMENT, " +
+                "location text, " +
+                "shop_name text" +
+                ")";
+        String createFoodInfoTable = "" +
+                "CREATE TABLE IF NOT EXISTS foodInfo(" +
+                "id int PRIMARY KEY AUTOINCREMENT, " +
+                "shop_id int, " +
+                "food_name text, " +
+                "description text, " +
+                "vegan boolean, " +
+                "image blob, " +
+                "price real," +
+                "FOREIGN KEY (shop_id) REFERENCES shopInfo (id) " +
+                ")";
         db.execSQL(createUserTable);
         db.execSQL(createShopTable);
         db.execSQL(createFoodInfoTable);
@@ -25,12 +46,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String DropReviewTable = "DROP TABLE IF EXISTS review";
-        String DropShopTable = "DROP TABLE IF EXISTS review";
-        String DropFoodInfoTable = "DROP TABLE IF EXISTS review";
-        db.execSQL(DropReviewTable);
-        db.execSQL(DropShopTable);
-        db.execSQL(DropFoodInfoTable);
+        db.execSQL("DROP TABLE IF EXISTS review");
+        db.execSQL("DROP TABLE IF EXISTS foodInfo");
+        db.execSQL("DROP TABLE IF EXISTS shopInfo");
 
         onCreate(db);
     }
