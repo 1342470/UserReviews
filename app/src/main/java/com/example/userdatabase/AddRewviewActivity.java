@@ -17,19 +17,19 @@ public class AddRewviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         TextView username = findViewById(R.id.username);
-        TextView locaiton = findViewById(R.id.Location);
-        TextView discription = findViewById(R.id.discriptionInput);
+        TextView location = findViewById(R.id.Location);
+        TextView description = findViewById(R.id.discriptionInput);
         TextView rating = findViewById(R.id.RatingInput);
-        CheckBox Vegan = findViewById(R.id.VeganCheck);
+        CheckBox vegan = findViewById(R.id.VeganCheck);
 
-        Button Sumbit = findViewById(R.id.submit);
+        Button submit = findViewById(R.id.submit);
 
-        Sumbit.setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String userNameValue = username.getText().toString();
-                String locationValue = locaiton.getText().toString();
-                String discriptionValue = discription.getText().toString();
+                String locationValue = location.getText().toString();
+                String discriptionValue = description.getText().toString();
                 String ratingValue = rating.getText().toString();
                 ContentValues values = new ContentValues();
                 values.put("", userNameValue);

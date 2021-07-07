@@ -19,6 +19,11 @@ public class Database extends DatabaseHelper {
         return db.insert("review", null, values);
     }
 
+    public long addRestaurant(ContentValues values) {
+        SQLiteDatabase db = getWritableDatabase();
+        return db.insert("store", null, values);
+    }
+
     public Cursor getreviewlist(){
         SQLiteDatabase db = this.getReadableDatabase();
         String table = "review";

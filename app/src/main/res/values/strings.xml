@@ -26,4 +26,8 @@
     <string name="discription">Discription</string>
     <string name="vegan">Vegan</string>
     <string name="price">Price</string>
+    <string name="add_restaurant">Add eating place</string>
+    <string name="view_places">View eating places</string>
+    <string name="loc_label">Location</string>
+    <string name="storeName">Store name</string>
 </resources>

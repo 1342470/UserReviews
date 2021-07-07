@@ -22,13 +22,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "FOREIGN KEY (id) REFERENCES foodInfo (id) " +
                 ")";
         String createShopTable = "" +
-                "CREATE TABLE IF NOT EXISTS shopInfo(" +
+                "CREATE TABLE IF NOT EXISTS shop(" +
                 "id INT PRIMARY KEY AUTOINCREMENT, " +
                 "location text, " +
                 "shop_name text" +
                 ")";
         String createFoodInfoTable = "" +
-                "CREATE TABLE IF NOT EXISTS foodInfo(" +
+                "CREATE TABLE IF NOT EXISTS food(" +
                 "id int PRIMARY KEY AUTOINCREMENT, " +
                 "shop_id int, " +
                 "food_name text, " +
@@ -36,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "vegan boolean, " +
                 "image blob, " +
                 "price real," +
-                "FOREIGN KEY (shop_id) REFERENCES shopInfo (id) " +
+                "FOREIGN KEY (shop_id) REFERENCES shop (id) " +
                 ")";
         db.execSQL(createUserTable);
         db.execSQL(createShopTable);
@@ -47,8 +47,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS review");
-        db.execSQL("DROP TABLE IF EXISTS foodInfo");
-        db.execSQL("DROP TABLE IF EXISTS shopInfo");
+        db.execSQL("DROP TABLE IF EXISTS food");
+        db.execSQL("DROP TABLE IF EXISTS shop");
 
         onCreate(db);
     }

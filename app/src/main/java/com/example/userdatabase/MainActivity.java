@@ -12,17 +12,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DatabaseHelper dphhelper = new DatabaseHelper(this);
+        DatabaseHelper dbhelper = new DatabaseHelper(this);
         setContentView(R.layout.activity_main);
-        gotToNewUser();
-        gotoReviews();
-
+//        addReviewBtn();
+        listReviewsBtn();
+        addEatery();
 
 
     }
 
-    private void gotToNewUser() {
-        Button skipnew = findViewById(R.id.GOTODATA);
+
+    private void addEatery() {
+        Button skipnew = findViewById(R.id.add_eating_place);
         skipnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +32,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void gotoReviews() {
+//    private void addReviewBtn() {
+//        Button skipnew = findViewById(R.id.GOTODATA);
+//        skipnew.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, AddRewviewActivity.class));
+//            }
+//        });
+//    }
+
+    private void listReviewsBtn() {
         Button listreview = findViewById(R.id.listreviews);
         listreview.setOnClickListener(new View.OnClickListener() {
             @Override
