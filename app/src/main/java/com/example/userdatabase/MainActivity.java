@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     // Show all data
-                    showMessage("Data",buffer.toString());
+                    showMessage("Shop data",buffer.toString());
                 }
 
 
