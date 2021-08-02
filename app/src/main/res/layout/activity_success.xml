@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Success">
+
+    <TextView
+        android:id="@+id/titleLable"
+        android:layout_width="403dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="615dp"
+        android:text="@string/you_have_succesfully_submited_a_review_please_select_from_the_following"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextReview"
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
+        android:text="@string/add_antoher_review"
+        app:layout_constraintStart_toStartOf="@+id/titleLable"
+        app:layout_constraintTop_toBottomOf="@+id/titleLable" />
+
+    <Button
+        android:id="@+id/viewReview"
+        android:layout_width="142dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/view_reviews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nextReview"
+        app:layout_constraintTop_toTopOf="@+id/nextReview" />
+
+    <Button
+        android:id="@+id/backHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:text="@string/back_to_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/viewReview"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/nextReview" />
+
+    <TextView
+        android:id="@+id/rNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/titleLable"
+        app:layout_constraintStart_toStartOf="@+id/titleLable" />
+
+    <TextView
+        android:id="@+id/foodIdLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/rNameLabel"
+        app:layout_constraintTop_toTopOf="@+id/rNameLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

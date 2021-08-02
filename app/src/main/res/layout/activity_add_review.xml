@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddReview">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddEatery"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/Comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:labelFor="@id/reviewInput"
+            android:text="@string/comments_on_the_food"
+            app:layout_constraintBottom_toTopOf="@+id/reviewInput"
+            app:layout_constraintStart_toStartOf="@+id/reviewInput" />
+
+
+        <EditText
+            android:id="@+id/reviewInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewLable" />
+
+        <TextView
+            android:id="@+id/placeNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:labelFor="@id/ratingInput"
+            android:text="@string/rating"
+            app:layout_constraintBottom_toTopOf="@+id/ratingInput"
+            app:layout_constraintStart_toStartOf="@+id/ratingInput" />
+
+        <EditText
+            android:id="@+id/ratingInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:autofillHints="Name of shop"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/reviewInput"
+            app:layout_constraintStart_toStartOf="@+id/reviewInput"
+            app:layout_constraintTop_toBottomOf="@+id/reviewInput" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/submit"
+            app:layout_constraintEnd_toEndOf="@+id/ratingInput"
+            app:layout_constraintTop_toBottomOf="@+id/ratingInput" />
+
+        <TextView
+            android:id="@+id/reviewLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Now add your comments on the food along with rating of that item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

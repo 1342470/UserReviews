@@ -30,4 +30,17 @@
     <string name="view_places">View eating places</string>
     <string name="loc_label">Location</string>
     <string name="storeName">Store name</string>
+    <string name="food_name">food name</string>
+    <string name="discription_of_food">Discription of food</string>
+    <string name="comments_on_the_food">Comments on the food</string>
+    <string name="todo">TODO</string>
+    <string name="back_to_menu">Back to menu</string>
+    <string name="add_antoher_review">Add antoher review</string>
+    <string name="you_have_succesfully_submited_a_review_please_select_from_the_following">You have succesfully submited a review please select from the following</string>
+    <string name="all_currently_review_stores">All currently review stores</string>
+    <string name="name">Name</string>
+    <string name="refresh">Refresh</string>
+    <string name="view_food_items">View food items</string>
+    <string name="exit_app">Exit app</string>
+    <string name="click_on_a_button_to_select_what_you_would_like_to_review_once_you_have_selected_a_pop_up_will_show_you_the_details_you_wish_to_view_to_go_back_from_this_prompt_press_the_back_button_on_your_device">Click on a button to select what you would like to review once you have selected a pop up will show you the details you wish to view to go back from this prompt press the back button on your device</string>
 </resources>

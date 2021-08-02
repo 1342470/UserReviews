@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFoodItemActivity">
+
+    <EditText
+        android:id="@+id/PriceInput"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/VeganCheck"
+        app:layout_constraintTop_toBottomOf="@+id/VeganCheck" />
+
+    <EditText
+        android:id="@+id/discriptionInput"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/foodName"
+        app:layout_constraintTop_toBottomOf="@+id/foodName" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <EditText
+        android:id="@+id/foodName"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="172dp"
+        android:autofillHints="food id"
+        android:inputType="text"
+        android:labelFor="@+id/foodName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/foodNameLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/foodName"
+        android:text="@string/food_name"
+        app:layout_constraintBottom_toTopOf="@+id/foodName"
+        app:layout_constraintStart_toStartOf="@+id/foodName" />
+
+    <TextView
+        android:id="@+id/AddreviewText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/add_review"
+        android:labelFor="@id/discriptionInput"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/foodName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Discription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/discriptionInput"
+        android:text="@string/discription_of_food"
+        app:layout_constraintBottom_toTopOf="@+id/discriptionInput"
+        app:layout_constraintStart_toStartOf="@+id/discriptionInput" />
+
+    <TextView
+        android:id="@+id/Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:labelFor="@id/PriceInput"
+        app:layout_constraintBottom_toTopOf="@+id/PriceInput"
+        app:layout_constraintStart_toStartOf="@+id/PriceInput" />
+
+    <TextView
+        android:id="@+id/reviewRNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/AddreviewText"
+        app:layout_constraintStart_toEndOf="@+id/AddreviewText"
+        app:layout_constraintTop_toTopOf="@+id/AddreviewText"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/VeganCheck"
+        android:layout_width="294dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/discriptionInput"
+        app:layout_constraintTop_toBottomOf="@+id/discriptionInput" />
+
+    <TextView
+        android:id="@+id/VeganLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vegan"
+        android:labelFor="@id/VeganCheck"
+        app:layout_constraintBottom_toTopOf="@+id/VeganCheck"
+        app:layout_constraintStart_toStartOf="@+id/VeganCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

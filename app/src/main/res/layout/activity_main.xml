@@ -68,4 +68,12 @@
         app:layout_constraintTop_toTopOf="@+id/listreviews"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Button
+        android:id="@+id/Exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/listreviews" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

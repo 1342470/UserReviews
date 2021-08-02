@@ -12,12 +12,8 @@
         android:layout_width="93dp"
         android:layout_height="59dp"
         android:text="@string/go_home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintStart_toStartOf="@+id/getReviews"
+        app:layout_constraintTop_toBottomOf="@+id/getReviews" />
 
     <TextView
         android:id="@+id/Reviews"
@@ -32,15 +28,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
-    <LinearLayout
-        android:layout_width="388dp"
-        android:layout_height="512dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365"></LinearLayout>
+    <Button
+        android:id="@+id/getReviews"
+        android:layout_width="199dp"
+        android:layout_height="465dp"
+        android:layout_marginTop="152dp"
+        android:text="@string/view_reviews"
+        app:layout_constraintStart_toStartOf="@+id/Reviews"
+        app:layout_constraintTop_toBottomOf="@+id/Reviews" />
+
+    <Button
+        android:id="@+id/getFoodItems"
+        android:layout_width="189dp"
+        android:layout_height="465dp"
+        android:text="@string/view_food_items"
+        app:layout_constraintStart_toEndOf="@+id/getReviews"
+        app:layout_constraintTop_toTopOf="@+id/getReviews" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="379dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/click_on_a_button_to_select_what_you_would_like_to_review_once_you_have_selected_a_pop_up_will_show_you_the_details_you_wish_to_view_to_go_back_from_this_prompt_press_the_back_button_on_your_device"
+        app:layout_constraintStart_toStartOf="@+id/Reviews"
+        app:layout_constraintTop_toBottomOf="@+id/Reviews" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

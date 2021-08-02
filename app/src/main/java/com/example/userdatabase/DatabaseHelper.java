@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(@Nullable Context context) {
-        super(context, "MyFirstDB", null, 2);
+        super(context, "foodReviewsDB", null, 7);
     }
 
     @Override
@@ -17,25 +17,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createUserTable = "" +
                 "CREATE TABLE IF NOT EXISTS review(" +
                 "id integer PRIMARY KEY AUTOINCREMENT," +
-                "description text, " +
+                "food_id integer, " +
+                "reviewDescription text, " +
                 "rating integer, " +
-                "FOREIGN KEY (id) REFERENCES foodInfo (id) " +
+                "FOREIGN KEY (food_id) REFERENCES food (id) " +
                 ")";
         String createShopTable = "" +
                 "CREATE TABLE IF NOT EXISTS shop(" +
-                "id INT PRIMARY KEY AUTOINCREMENT, " +
+                "id integer PRIMARY KEY AUTOINCREMENT, " +
                 "location text, " +
-                "shop_name text" +
+                "name text" +
                 ")";
         String createFoodInfoTable = "" +
                 "CREATE TABLE IF NOT EXISTS food(" +
-                "id int PRIMARY KEY AUTOINCREMENT, " +
-                "shop_id int, " +
+                "id integer PRIMARY KEY AUTOINCREMENT, " +
+                "shop_id integer, " +
                 "food_name text, " +
-                "description text, " +
-                "vegan boolean, " +
-                "image blob, " +
-                "price real," +
+                "foodDescription text, " +
+                "vegan text, " +
+                "price text," +
                 "FOREIGN KEY (shop_id) REFERENCES shop (id) " +
                 ")";
         db.execSQL(createUserTable);

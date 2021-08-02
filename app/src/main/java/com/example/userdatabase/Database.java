@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.ContactsContract;
 
 import androidx.annotation.Nullable;
@@ -14,6 +15,10 @@ public class Database extends DatabaseHelper {
     }
 
 
+    public long addFoodItem(ContentValues values){
+        SQLiteDatabase db = getWritableDatabase();
+        return db.insert("food", null, values);
+    }
     public long addreview(ContentValues values){
         SQLiteDatabase db = getWritableDatabase();
         return db.insert("review", null, values);
@@ -21,22 +26,45 @@ public class Database extends DatabaseHelper {
 
     public long addRestaurant(ContentValues values) {
         SQLiteDatabase db = getWritableDatabase();
-        return db.insert("store", null, values);
+        return db.insert("shop", null, values);
     }
 
-    public Cursor getreviewlist(){
+
+
+    public Cursor getAllShopData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from shop",null);
+        return res;
+    }
+
+
+    public String getRestaurant(Long rID) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String table = "review";
-        String[] columns = {"food_info_id int,Discription text, rating int"};
-        String Seleciton = "";
+        String table = "shop";
+        String[] columns = {"name"};
+        String selection = "id = "  + rID.toString();
         String[] selectionArgs = {};
         String groupBy = null;
         String having = null;
-        String orderBy = " DESC";
-        String limit = "100";
+        String orderBy = "";
+        String limit = "1";
+        Cursor cursor = db.query(table, columns, selection, selectionArgs, groupBy, having, orderBy, limit);
+        cursor.moveToFirst();
+        return cursor.getString(0);
+    }
 
-        Cursor cursor = db.query(table, columns, Seleciton, selectionArgs, groupBy, having, orderBy, limit);
+    public Cursor getReviewData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor get = db.rawQuery("select * from review",null);
+        return get;
+    }
 
-        return cursor;
+
+
+
+    public Cursor getFoodData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor get = db.rawQuery("select * from food",null);
+        return get;
     }
 }
