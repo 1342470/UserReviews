@@ -11,9 +11,11 @@
         android:id="@+id/GoHome"
         android:layout_width="93dp"
         android:layout_height="59dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="4dp"
         android:text="@string/go_home"
-        app:layout_constraintStart_toStartOf="@+id/getReviews"
-        app:layout_constraintTop_toBottomOf="@+id/getReviews" />
+        app:layout_constraintStart_toEndOf="@+id/Reviews"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Reviews"
